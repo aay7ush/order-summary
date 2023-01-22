@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --primary-color: hsl(224, 23%, 55%);
+  --secondary-color: hsl(223, 47%, 23%);
+  --bg-color: hsl(225, 100%, 94%);
+  --accent-color: hsl(245, 75%, 52%);
+  --accent-hover-color: hsla(257, 82%, 62%, 0.903);
+  --white-color: hsl(225, 100%, 98%);
+  --grey-color: hsla(226, 68%, 95%, 0.673);
+}
+
+/* General Styles */
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--primary-color);
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  background-image: url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+
+  display: grid;
+  place-content: center;
+}
+
+button {
+  font: inherit;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+a:any-link {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-hover-color);
+  transition: 0.3s ease;
+}
+
+/* Order Section */
+
+.order {
+  display: grid;
+  max-width: 400px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+.order__content {
+  display: grid;
+  max-width: 400px;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+}
+
+.order__title {
+  color: var(--secondary-color);
+  font-weight: 900;
+}
+
+.order__body {
+  font-size: 16px;
+  line-height: 1.7rem;
+}
+
+.order__plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--grey-color);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.order__plan-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order__plan-items p:nth-child(1) {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.order__content .submit {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.order__content .cancel {
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.order__content .submit:hover {
+  background-color: var(--accent-hover-color);
+  transition: 0.3s ease;
+}
+
+.order__content .cancel:hover {
+  color: var(--secondary-color);
+  transition: 0.3s ease;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+  .order,
+  .order__content {
+    max-width: 450px;
+  }
+}
