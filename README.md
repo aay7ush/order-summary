@@ -11,7 +11,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Order summary card](https://interactive-rat1ng-component.netlify.app/)
+- Live Site URL: [Order summary card](https://0rder-summary-card.netlify.app/)
 
 ## Built with
 
